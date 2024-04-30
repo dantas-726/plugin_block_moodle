@@ -24,6 +24,8 @@ namespace block_moodle_dev2024\event;
  * @copyright   2024 Pedro_PluginDev <pedrodevpedro.com>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-// class \block_moodledev2024\event\myevent extends \core\event\base {}
+//  class \block_moodledev2024\event\myevent extends \core\event\base {
+
+//  }
 
     // For more information about the Events API please visit {@link https://docs.moodle.org/dev/Events_API}.
