@@ -26,6 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_moodle_dev2024';
 $plugin->release = '1';
-$plugin->version = 2024042906;
+$plugin->version = 2024042908;
 $plugin->requires = 2022041900;
 $plugin->maturity = MATURITY_ALPHA;

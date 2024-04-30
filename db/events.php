@@ -26,9 +26,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 $observers = array(
+
     array(
         'eventname' => '\core\event\user_loggedin',
         'callback' => '\block_moodledev2024\observer::handle_login',
-        'includefile' => '/blocks/moodledev2024/classes/observer.php', // Corrected path
+        'includefile' => '\blocks\moodledev2024\classes\observer.php',
     ),
 );

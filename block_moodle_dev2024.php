@@ -50,13 +50,13 @@ class block_moodle_dev2024 extends block_base {
         $this->content = new stdClass();
         $this->content->items = array();
         $this->content->icons = array();
-        $this->content->footer = get_string('footer', 'block_moodledev_2024');
+        $this->content->footer = get_string('footer', 'block_moodle_dev2024');
 
         $a = (object) [ 
             'url' => (new moodle_url ('/blocks/moodledev2024/manage.php'))->out(),
-            'link'=> get_string('link', 'blockmoodledev2024')
+            'link'=> get_string('link', 'block_moodle_dev2024')
         ];
-        $this->content->text = get_string('blockcontent', 'block_moodledev_2024', $a);
+        $this->content->text = get_string('blockcontent', 'block_moodle_dev2024', $a);
         return $this->content;
     }
 
