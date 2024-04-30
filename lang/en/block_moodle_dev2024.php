@@ -25,7 +25,10 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['blockcontent'] = '<a href ="{$a->url}">{$a->link} </a>'; 
 $string['exemplo'] = 'example_string_translation';
+$string['footer'] = 'footer content';
+$string['link'] = 'My link';
 $string['messageprovider:mensagens'] = 'Mensagens exemplo';
 $string['moodle_dev2024:manage'] = 'Manage block settings';
 $string['pluginname'] = 'Bloco moodle dev 2024';
