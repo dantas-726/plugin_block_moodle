@@ -25,7 +25,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['blockcontent'] = '<a href ="{$a->url}">{$a->link} </a>'; 
+$string['appearance'] = 'Appearance settings'; 
+$string['blockcontent'] = '<a href ="{$a->url}">{$a->link} </a>';
+$string['customtitle'] = 'Custom title';
+$string['customtitle_help'] = 'The custom title you want to be displayed instead of default block name.';
+$string['displaycustomtitle'] = 'Display custom title';
+$string['displaycustomtitle_help'] = 'The custom title you want to be displayed instead of default block name.';
 $string['exemplo'] = 'example_string_translation';
 $string['footer'] = 'Footer content'; 
 $string['link'] = 'My link';

@@ -30,6 +30,18 @@ if ($hassiteconfig) {
 
     // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedIf
     if ($ADMIN->fulltree) {
-        // TODO: Define actual plugin settings page and add it to the tree - {@link https://docs.moodle.org/dev/Admin_settings}.
+        $settings->add(new admin_setting_heading('block_moodle_dev2024/appearance', 
+        get_string('appearance', 'block_moodle_dev2024'),
+        ''));
+
+        $settings->add(new admin_setting_configcheckbox('block_moodle_dev2024/displaycustomtitle', 
+        get_string('displaycustomtitle', 'block_moodle_dev2024'),
+        get_string('displaycustomtitle_help', 'block_moodle_dev2024'),
+    0));
+
+        $settings->add(new admin_setting_configtext('block_moodle_dev2024/customtitle', 
+        get_string('customtitle', 'block_moodle_dev2024'),
+        get_string('customtitle_help', 'block_moodle_dev2024'),
+    ''));
     }
 }
