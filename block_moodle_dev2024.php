@@ -29,6 +29,7 @@ class block_moodle_dev2024 extends block_base {
     public function init() {
         // Needed by Moodle to differentiate between blocks.
         $this->config = get_config('block_moodle_dev2024');
+        $this->title = get_string('pluginname', 'block_moodle_dev2024');
     }
 
     /**
@@ -58,7 +59,7 @@ class block_moodle_dev2024 extends block_base {
         ];
         $this->content->text = get_string('blockcontent', 'block_moodle_dev2024', $a);
         return $this->content;
-    }
+    }   
 
     /**
      * Defines configuration data.
@@ -70,7 +71,7 @@ class block_moodle_dev2024 extends block_base {
         if (($this->config->displaycustomtitle == 1) && !empty($this->config->customtitle)) {
             $this->title = format_string($this->config->customtitle);
         } else {
-            $this->title = get_string('pluginname', 'moodle_dev2024');
+            $this->title = $this->config->title;
         }
     }
 
