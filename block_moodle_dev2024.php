@@ -39,6 +39,8 @@ class block_moodle_dev2024 extends block_base {
      */
     public function get_content() {
 
+        global $USER;
+
         if ($this->content !== null) {
             return $this->content;
         }
@@ -54,10 +56,18 @@ class block_moodle_dev2024 extends block_base {
         $this->content->footer = get_string('footer', 'block_moodle_dev2024');
 
         $a = (object) [ 
-            'url' => (new moodle_url ('/blocks/moodledev2024/manage.php'))->out(),
+            'url' => (new moodle_url ('/blocks/moodle_dev2024/manage.php'))->out(),
             'link'=> get_string('link', 'block_moodle_dev2024')
         ];
         $this->content->text = get_string('blockcontent', 'block_moodle_dev2024', $a);
+        $data = ( object ) [ 
+            'userid'=> $USER->id,
+            'name'=>'Nome fixo'
+        ];
+        
+        // $this->content->text .=  ': '. \block_moodledev2024\moodledev::add($data);
+
+
         return $this->content;
     }   
 
@@ -71,7 +81,7 @@ class block_moodle_dev2024 extends block_base {
         if (($this->config->displaycustomtitle == 1) && !empty($this->config->customtitle)) {
             $this->title = format_string($this->config->customtitle);
         } else {
-            $this->title = $this->config->title;
+            $this->title = get_string('pluginname', 'block_moodle_dev2024');
         }
     }
 

@@ -14,18 +14,24 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
+namespace block_moodledev2024;
+
 /**
- * Plugin version and other meta-data are defined here.
+ * moodledev generic class.
  *
  * @package     block_moodle_dev2024
  * @copyright   2024 Pedro_PluginDev <pedrodevpedro.com>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+class moodledev {
 
-$plugin->component = 'block_moodle_dev2024';
-$plugin->release = '1';
-$plugin->version = 20240503001;
-$plugin->requires = 2022041900;
-$plugin->maturity = MATURITY_ALPHA;
+  public static function add ($data) { 
+
+    global $DB;
+    $data->timecreated = time();
+    
+    return $DB->insert_record('block_moodledev2024', $data);
+  }
+
+}

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="blocks/moodle_dev2024/db" VERSION="20240502" COMMENT="XMLDB file for Moodle blocks/moodle_dev2024"
+<XMLDB PATH="blocks/moodle_dev2024/db" VERSION="20240503" COMMENT="XMLDB file for Moodle blocks/moodle_dev2024"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
 >
   <TABLES>
-    <TABLE NAME="block_moodle_dev2024" COMMENT="Default comment for block_moodle_dev2024, please edit me">
+    <TABLE NAME="moodle_dev2024" COMMENT="Default comment for block_moodle_dev2024, please edit me">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
         <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
         <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
       </FIELDS>
       <KEYS>
         <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
